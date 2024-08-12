@@ -4,23 +4,6 @@
     <!-- Header Start -->
     <div class="header-area">
         <div class="main-header ">
-            <div class="header-top top-bg d-none d-lg-block">
-                <?php foreach ($profil as $header) :  ?>
-                    <div class="container-fluid">
-                        <div class="col-xl-12">
-                            <div class="row d-flex justify-content-between align-items-center">
-                                <div class="header-info-left">
-                                    <ul>
-                                        <!--<li><i class="fas fa-map-marker-alt"></i></a><?= $header->alamat; ?></li>-->
-                                        <li><i class="fas fa-envelope"></i><?= $header->email; ?></li>
-                                        <li><i class="fas fa-phone"></i><?= $header->no_hp; ?></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            </div>
             <div class="header-bottom  header-sticky">
                 <div class="container-fluid">
                     <div class="row align-items-center">
