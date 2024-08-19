@@ -8,8 +8,8 @@
 
 <main>
 
-<div class="container-fluid py-2">
-    <div class="container pt-0 pt-lg-4">
+<div class="container-fluid py-2" style="padding-top: 10px !important;"> <!-- Adjust the value as needed -->
+    <div class="container pt-0 pt-lg-4" style="padding-top: 40px !important;"> <!-- Adjust the value as needed -->
         <div class="about-title" style="width: 60%; margin: 0 auto 20px auto; border-bottom: 2px solid #000000;">
             <?php foreach ($profil as $title) : ?>
                 <p class="title-text mb-4" style="font-size: 36px; font-weight: bold; text-align: center; color: #007BFF;">
@@ -21,17 +21,19 @@
 </div>
 
 
+
 <!-- We Trusted Start-->
 <div class="we-trusted-area trusted-padding">
     <div class="container">
         <?php foreach ($profil as $descper) : ?>
             <div class="row justify-content-center">
-                <div class="col-xl-4 col-lg-6 mb-4 text-center">
-                    <div class="trusted-img">
-                        <img data-src="asset-user/images/<?= $descper->foto_utama; ?>" alt="<?= $descper->nama_perusahaan; ?>" class="img-fluid lazyload">
-                    </div>
-                </div>
-            </div>
+    <div class="col-xl-6 col-lg-4 mb-4 text-center"> <!-- Increase the column width -->
+        <div class="trusted-img">
+            <img data-src="asset-user/images/<?= $descper->foto_utama; ?>" alt="<?= $descper->nama_perusahaan; ?>" class="img-fluid lazyload">
+        </div>
+    </div>
+</div>
+
             <div class="row justify-content-center">
                 <div class="col-xl-8 col-lg-10 text-center">
                     <div class="trusted-caption">
@@ -107,6 +109,7 @@
 <?= $this->endSection('content') ?>
 
 <style>
+
     .we-trusted-area {
         text-align: center !important;
         margin-top: 10px !important;
@@ -114,11 +117,24 @@
     }
 
     .trusted-img img {
-        max-width: 100% !important;
-        height: auto !important;
-        width: 100%;
-        max-width: 800px;
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 1000px !important; /* Set the maximum width of the image */
+}
+
+.col-xl-8, .col-lg-10 { /* Ensure the container takes more space */
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+}
+
+@media (min-width: 992px) { /* Adjust these media queries based on your grid system */
+    .col-xl-8, .col-lg-10 {
+        flex: 0 0 75% !important; /* Use 75% of the row width on larger screens */
+        max-width: 75% !important;
     }
+}
+
 
     .description-text {
         margin: 10px auto !important;
