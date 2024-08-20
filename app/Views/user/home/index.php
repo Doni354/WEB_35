@@ -63,7 +63,7 @@
         <!-- section title -->
         <div class="row">
             <div class="col-lg-12">
-                <div class="section-title text-center">
+                <div class="section-title text-center" style="border-bottom: 2px solid #000000; padding-bottom: 20px !important;">
                     <h2><?php echo lang('Blog.btnOurproducts'); ?></h2>
                 </div>
             </div>
@@ -72,7 +72,7 @@
             <?php $count = 0;
             foreach ($tbproduk as $produk) :
                 if ($count < 3) { ?>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="col-xl-4 col-lg-4 col-md-6" style="padding-top: 40px !important;">
                         <div class="single-recent-cap mb-30">
                             <div class="recent-img">
                                 <img src="asset-user/images/<?= $produk->foto_produk; ?>" alt="<?php if (lang('Blog.Languange') == 'en') {echo $produk->nama_produk_en;} ?>
@@ -109,6 +109,17 @@
 <?= $this->endSection('content') ?>
 
 <style>
+
+.recent-area.section-paddingt {
+    background-color: #333 !important; /* Darker background color */
+}
+
+.recent-area .section-title h2 {
+    color: #ffffff !important; /* Ensure the section title is visible on the dark background */
+    border-bottom: 2px solid #007BFF !important; /* Add a border to the section title */
+    padding-bottom: 20px !important;
+}
+
 
     .we-trusted-area {
         text-align: center !important;
