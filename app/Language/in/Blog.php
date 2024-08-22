@@ -21,4 +21,5 @@ return [
     'titleDescActv' => 'Deskripsi Aktivitas',
     'headerLanguange' => 'Bahasa',
     'Languange' => 'in',
+    'currentPosition' => 'Posisi Kami Saat Ini'
 ];

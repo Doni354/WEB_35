@@ -26,12 +26,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 mb-4 mb-lg-0">
-                        <img data-src="/asset-user/images/<?= $tbaktivitas->foto_aktivitas ?>" alt="<?php if (lang('Blog.Languange') == 'en') {
-                                                                                                        echo $tbaktivitas->nama_aktivitas_en;
-                                                                                                    } ?>
-                                    <?php if (lang('Blog.Languange') == 'in') {
-                                        echo $tbaktivitas->nama_aktivitas_in;
-                                    } ?>" class="img-fluid img-overlap lazyload">
+                        <img data-src="/asset-user/images/<?= $tbaktivitas->foto_aktivitas ?>" 
+                            alt="<?php if (lang('Blog.Languange') == 'en') {
+                            echo $tbaktivitas->nama_aktivitas_en;
+                            } ?>
+                            <?php if (lang('Blog.Languange') == 'in') {
+                                echo $tbaktivitas->nama_aktivitas_in;
+                            } ?>"  
+                        class="img-fluid img-overlap lazyload">
                     </div>
                     <div class="col-lg-5 ml-auto">
                         <h3 class="section-subtitle text-white opacity-50"><?php echo lang('Blog.titleAboutUs')  ?></h3>

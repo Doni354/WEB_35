@@ -19,41 +19,43 @@
         </div>
     </div>
 </div>
+<body>
+    <div class="p-3" style="max-width: 900px; margin: 0 auto; text-align: center;">
+        <h3 class="display-3 mt-5 mb-md-5" style="font-size: 36px; font-weight: bold; color: #007BFF; border-bottom: 2px solid black; padding-bottom: 10px;">
+            <?= lang('Blog.currentPosition') ?>
+        </h3>
+    </div>
+</body>
+
 <div class="site-section">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 mb-5 mb-md-5">
+        <div class="row justify-content-center">
+            <div class="col-md-12 mb-5 mb-md-5">
                 <div class="testimonial">
                     <p class="map">
-                        <div class="embed-responsive embed-responsive-16by9" style="width: 100%;">
-                            <?php foreach ($profil as $maps) :  ?>
-                                <?php echo $maps->link_maps ?>
-                            <?php endforeach;  ?>
-                        </div>
+                        <?php foreach ($profil as $maps) : ?>
+                            <div class="embed-responsive embed-responsive-21by9">
+                                <?= $maps->link_maps ?>
+                            </div>
+                        <?php endforeach; ?>
                     </p>
-                </div>
-            </div>
-            <div class="col-md-6 mb-5 mb-md-5">
-                <div class="testimonial">
-                    <?php foreach ($profil as $desc) : ?>
-                        <blockquote>
-                            <p>
-                                <?php if (lang('Blog.Languange') == 'en') {
-                                    echo $desc->deskripsi_kontak_en;
-                                } ?>
-                                <?php if (lang('Blog.Languange') == 'in') {
-                                    echo $desc->deskripsi_kontak_in;
-                                } ?>
-                            </p>
-                        </blockquote>
-                        <!-- <img src="images/person_2.jpg" alt="">
-                    
-                    <p class="client-name">Ben Anderson</p> -->
-                    <?php endforeach;  ?>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
+<!-- Contact Info Box -->
 <?= $this->endSection('content'); ?>
+
+<style>
+    .contact-info-box {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+    .contact-info-item i {
+        margin-right: 10px;
+    }
+</style>
+
+<!-- Add Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">

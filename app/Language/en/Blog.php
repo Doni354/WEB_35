@@ -21,4 +21,5 @@ return [
     'titleDescActv' => 'Activities Description',
     'headerLanguange' => 'Languange',
     'Languange' => 'en',
+    'currentPosition' => 'Our Position Right Now'
 ];

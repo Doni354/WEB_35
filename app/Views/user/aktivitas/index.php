@@ -26,12 +26,14 @@
                 <div class="col-md-6 mb-5 mb-lg-5 col-lg-4">
                     <div class="blog-entry">
                         <a href="<?= base_url('activities/detail/' . $aktivitas->id_aktivitas . '/' . url_title($aktivitas->nama_aktivitas_en) . '_' . url_title($aktivitas->nama_aktivitas_in)) ?>" class="img-link">
-                            <img data-src="asset-user/images/<?= $aktivitas->foto_aktivitas ?>" alt="<?php if (lang('Blog.Languange') == 'en') {
-                                                                                                            echo $aktivitas->nama_aktivitas_en;
-                                                                                                        } ?>
-                                    <?php if (lang('Blog.Languange') == 'in') {
+                            <img data-src="asset-user/images/<?= $aktivitas->foto_aktivitas ?>" 
+                                alt="<?php if (lang('Blog.Languange') == 'en') {
+                                        echo $aktivitas->nama_aktivitas_en;
+                                } ?>
+                                <?php if (lang('Blog.Languange') == 'in') {
                                         echo $aktivitas->nama_aktivitas_in;
-                                    } ?>" class="img-fluid lazyload">
+                                } ?>" 
+                            class="img-fluid lazyload">
                         </a>
                         <div class="blog-entry-contents">
                             <h3 class="project-item-title">
@@ -44,7 +46,6 @@
                                     } ?>
                                 </a>
                             </h3>
-                            <!-- <div class="meta">Posted by <a href="#">Admin</a> In <a href="#">News</a></div> -->
                         </div>
                     </div>
                 </div>
