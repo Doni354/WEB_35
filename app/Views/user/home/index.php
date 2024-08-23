@@ -6,21 +6,43 @@
 
 <!-- END slider -->
 
+<style>
+    /* Default style for larger screens */
+    .responsive-title {
+        font-size: 36px;
+        font-weight: bold;
+        color: #007BFF;
+        text-align: center;
+    }
+
+    /* Media query for screens smaller than 768px (e.g., tablets and mobile devices) */
+    @media (max-width: 768px) {
+        .responsive-title {
+            font-size: 28px; /* Adjust the value as needed */
+        }
+    }
+
+    /* Media query for screens smaller than 576px (e.g., small mobile devices) */
+    @media (max-width: 576px) {
+        .responsive-title {
+            font-size: 24px; /* Adjust the value as needed */
+        }
+    }
+</style>
+
 <main>
 
-<div class="container-fluid py-2" style="padding-top: 10px !important;"> <!-- Adjust the value as needed -->
-    <div class="container pt-0 pt-lg-4" style="padding-top: 40px !important;"> <!-- Adjust the value as needed -->
+<div class="container-fluid py-2" style="padding-top: 10px !important;">
+    <div class="container pt-0 pt-lg-4" style="padding-top: 40px !important;"> 
         <div class="about-title" style=" margin: 0 auto 20px auto; border-bottom: 2px solid #000000;">
             <?php foreach ($profil as $title) : ?>
-                <p class="title-text mb-4" style="font-size: 36px; font-weight: bold;text-align: center; color: #007BFF;">
+                <p class="responsive-title">
                     <?= $title->title_website; ?>
                 </p>
             <?php endforeach; ?>
         </div>
     </div>
 </div>
-
-
 
 <!--About Us Start-->
 <div class="we-trusted-area trusted-padding">
@@ -63,8 +85,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="section-title text-center" style="border-bottom: 2px solid #000000; margin:0 auto;">
-                    <p style="color:#007BFF;font-size: 36px; font-weight: bold; text-align: center;"><?php echo lang('Blog.btnOurproducts'); ?></p>
+                <div class="about-title" style=" margin: 0 auto 20px auto; border-bottom: 2px solid #000000;">
+                    <p class="responsive-title" style="color:#007BFF;">
+                        <?php echo lang('Blog.btnOurproducts'); ?>
+                    </p>
                 </div>
             </div>
         </div>
@@ -108,10 +132,14 @@
 <!-- Our Product End-->
 
 <!-- Contact Start-->
-<div class="p-2" style="max-width: 900px; margin: 0 auto; text-align: center;">
-    <h3 class="display-3 mt-5 mb-md-5" style="font-size: 36px; margin:0 auto; font-weight: bold; color: #007BFF; border-bottom: 2px solid black; padding-bottom:10px;margin-bottom:1rem!important;">
-        <?= lang('Blog.currentPosition') ?>
-    </h3>
+<div class="container-fluid py-2" style="padding-top: 10px !important;">
+    <div class="container pt-0 pt-lg-4" style="padding-top: 40px !important;"> 
+        <div class="section-title text-center" style="border-bottom: 2px solid #000000; margin:0 auto;">
+            <p class="responsive-title" style="color:#007BFF;">
+                <?= lang('Blog.currentPosition') ?>
+            </p>
+        </div>
+    </div>
 </div>
 
 <div class="site-section">

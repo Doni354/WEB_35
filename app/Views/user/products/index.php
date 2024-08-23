@@ -24,14 +24,14 @@
     <div class="container">
         <!-- section tittle -->
         <div class="row">
-            <?php foreach ($tbproduk as $produk) :
-            ?>
+            <?php foreach ($tbproduk as $produk) :?>
                 <div class="col-xl-4 col-lg-4 col-md-6">
                     <div class="single-recent-cap mb-30">
                         <div class="recent-img">
-                            <img src="asset-user/images/<?= $produk->foto_produk; ?>" alt="<?php if (lang('Blog.Languange') == 'en') {
-                                                                                                echo $produk->nama_produk_en;
-                                                                                            } ?>
+                            <img src="asset-user/images/<?= $produk->foto_produk; ?>" 
+                            alt="<?php if (lang('Blog.Languange') == 'en') {
+                                     echo $produk->nama_produk_en;
+                                    } ?>
                                     <?php if (lang('Blog.Languange') == 'in') {
                                         echo $produk->nama_produk_in;
                                     } ?>">
@@ -44,15 +44,15 @@
                                     } ?>
                                     <?php if (lang('Blog.Languange') == 'in') {
                                         echo $produk->nama_produk_in;
-                                    } ?></a></h4>
+                                    } ?>
+                                </a>
+                            </h4>
                         </div>
                     </div>
                 </div>
-            <?php
-            endforeach; ?>
+            <?php endforeach; ?>
         </div>
     </div>
-
 </div>
 
 <?= $this->endSection('content'); ?>
