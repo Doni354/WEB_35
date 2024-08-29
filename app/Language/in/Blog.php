@@ -13,7 +13,7 @@ return [
     'btnReadmore' => 'Baca Selengkapnya',
     'btnOurproducts' => 'Produk Kami',
     'titleOurproducts' => 'Produk dari',
-    'titleOurarticle' => 'Artikel dari',
+    'titleOurarticle' => 'Baca Artikel Kami',
     'titleActivities' => 'Aktivitas dari',
     'titleOurContact' => 'Kontak dari',
     'titleAboutUs' => 'Tentang Kami',
