@@ -20,7 +20,7 @@
     </div>
 </div>
 <body>
-    <div class="p-3" style="max-width: 900px; margin: 0 auto; text-align: center;">
+    <div class="p-3" style="max-width: 1200px; margin: 0 auto; text-align: center;">
         <h3 class="display-3 mt-5 mb-md-5" style="font-size: 36px; font-weight: bold; color: #007BFF; border-bottom: 2px solid black; padding-bottom: 10px;">
             <?= lang('Blog.currentPosition') ?>
         </h3>
