@@ -43,7 +43,7 @@
                 $short_description = (strlen($description) > 100) ? substr($description, 0, 100) . '...' : $description;
                 echo '<span class="description-text">' . $short_description . '</span>';
                 if (strlen($description) > 100) {
-                    echo ' <a href="' . base_url('/about') . '" class="read-more-btn">Read More</a>';
+                    echo ' <a href="' . base_url('/about') . '" class="read-more-btn">Learn More About Us</a>';
                 }
                 ?>
             <?php endforeach; ?>
